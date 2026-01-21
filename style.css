@@ -95,8 +95,8 @@ header {
     background: transparent;
     border: 2px solid var(--accent-red);
     color: var(--text-white);
-    padding: 8px 20px;
-    font-size: 1rem;
+    padding: 5px 12px;
+    font-size: 0.85rem;
     font-weight: 600;
     cursor: pointer;
     border-radius: 5px;
@@ -115,7 +115,7 @@ header {
 
 .separator {
     color: var(--text-gray);
-    font-size: 1.2rem;
+    font-size: 0.9rem;
 }
 
 /* ==========================================
@@ -342,8 +342,12 @@ footer p {
     }
     
     .lang-btn {
-        padding: 6px 15px;
-        font-size: 0.85rem;
+        padding: 4px 10px;
+        font-size: 0.75rem;
+    }
+    
+    .separator {
+        font-size: 0.8rem;
     }
 }
 
