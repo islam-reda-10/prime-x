@@ -4,7 +4,6 @@
 const plansData = {
     prime: {
         title: { ar: "برايم", en: "Prime" },
-        image: "images/prime.jpg",
         plans: [
             {
                 duration: { ar: "شهر واحد", en: "1 Month" },
@@ -84,7 +83,6 @@ const plansData = {
     },
     "prime-pro": {
         title: { ar: "برايم برو", en: "Prime Pro" },
-        image: "images/prime-pro.jpg",
         plans: [
             {
                 duration: { ar: "شهر واحد", en: "1 Month" },
@@ -170,7 +168,6 @@ const plansData = {
     },
     "prime-x": {
         title: { ar: "برايم إكس", en: "Prime X" },
-        image: "images/prime-x.jpg",
         plans: [
             {
                 duration: { ar: "شهر واحد", en: "1 Month" },
@@ -259,7 +256,7 @@ const plansData = {
 // ==========================================
 // STATE MANAGEMENT
 // ==========================================
-let currentLanguage = "ar";
+let currentLanguage = "en";
 let currentTab = "prime";
 
 // WhatsApp Configuration
@@ -305,12 +302,6 @@ function updateLanguageToggle() {
 }
 
 function updateAllTranslations() {
-    // Update slogan
-    const slogan = document.querySelector(".slogan");
-    if (slogan) {
-        slogan.textContent = slogan.dataset[currentLanguage];
-    }
-
     // Update tab labels
     document.querySelectorAll(".tab-btn span").forEach(span => {
         span.textContent = span.dataset[currentLanguage];
@@ -367,7 +358,6 @@ function renderContent() {
     // Build HTML content
     let html = `
         <div class="container fade-in">
-            <img src="${planData.image}" alt="${planData.title[currentLanguage]}" class="section-image">
             <h2 class="section-title">${planData.title[currentLanguage]}</h2>
             <div class="cards-grid">
     `;

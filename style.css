@@ -47,6 +47,7 @@ header {
     padding: 30px 0 20px;
     text-align: center;
     border-bottom: 2px solid var(--accent-red);
+    position: relative;
 }
 
 .logo-container {
@@ -77,11 +78,12 @@ header {
 
 /* Language Toggle */
 .language-toggle {
+    position: absolute;
+    top: 20px;
+    left: 20px;
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 10px;
-    margin-top: 20px;
 }
 
 .lang-btn {
@@ -313,6 +315,11 @@ footer p {
     
     .cards-grid {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    
+    .language-toggle {
+        top: 30px;
+        left: 30px;
     }
 }
 
