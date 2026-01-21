@@ -44,35 +44,39 @@ body[lang="ar"] {
    ========================================== */
 header {
     background-color: var(--primary-bg);
-    padding: 30px 0 20px;
+    padding: 20px 0;
     text-align: center;
     border-bottom: 2px solid var(--accent-red);
     position: relative;
 }
 
 .logo-container {
-    margin-bottom: 20px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
 
 .logo {
-    max-width: 120px;
+    max-width: 60px;
     height: auto;
-    display: inline-block;
+    display: block;
+    background: transparent;
 }
 
 .gym-name {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
     color: var(--accent-red);
     margin-bottom: 10px;
     text-transform: uppercase;
     letter-spacing: 2px;
+    padding-top: 10px;
 }
 
 .slogan {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--text-gray);
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-style: italic;
 }
 
@@ -84,6 +88,7 @@ header {
     display: flex;
     align-items: center;
     gap: 10px;
+    z-index: 10;
 }
 
 .lang-btn {
@@ -307,10 +312,49 @@ footer p {
    RESPONSIVE DESIGN - MOBILE FIRST
    ========================================== */
 
+/* Mobile-specific adjustments */
+@media (max-width: 575px) {
+    header {
+        padding: 15px 0;
+    }
+    
+    .language-toggle {
+        top: 15px;
+        left: 15px;
+    }
+    
+    .logo-container {
+        top: 15px;
+        right: 15px;
+    }
+    
+    .logo {
+        max-width: 50px;
+    }
+    
+    .gym-name {
+        font-size: 1.8rem;
+        padding-top: 5px;
+    }
+    
+    .slogan {
+        font-size: 0.9rem;
+    }
+    
+    .lang-btn {
+        padding: 6px 15px;
+        font-size: 0.85rem;
+    }
+}
+
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
     .gym-name {
-        font-size: 3rem;
+        font-size: 2.5rem;
+    }
+    
+    .slogan {
+        font-size: 1.1rem;
     }
     
     .cards-grid {
@@ -321,16 +365,25 @@ footer p {
         top: 30px;
         left: 30px;
     }
+    
+    .logo-container {
+        top: 30px;
+        right: 30px;
+    }
+    
+    .logo {
+        max-width: 70px;
+    }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
     .logo {
-        max-width: 150px;
+        max-width: 80px;
     }
     
     .gym-name {
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
     
     .slogan {
