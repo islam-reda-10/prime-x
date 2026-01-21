@@ -57,12 +57,12 @@ header {
 }
 
 .logo {
-    max-width: 150px;
+    max-width: 250px;
     height: auto;
     display: block;
     background-color: white;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 25px 50px;
+    border-radius: 15px;
 }
 
 /* Language Toggle */
@@ -309,8 +309,9 @@ footer p {
     }
     
     .logo {
-        max-width: 120px;
-        padding: 15px;
+        max-width: 180px;
+        padding: 20px 40px;
+        border-radius: 12px;
     }
     
     .lang-btn {
@@ -335,16 +336,18 @@ footer p {
     }
     
     .logo {
-        max-width: 150px;
-        padding: 20px;
+        max-width: 250px;
+        padding: 25px 50px;
+        border-radius: 15px;
     }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
     .logo {
-        max-width: 180px;
-        padding: 25px;
+        max-width: 300px;
+        padding: 30px 60px;
+        border-radius: 18px;
     }
     
     .tab-btn {
