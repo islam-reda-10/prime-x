@@ -291,14 +291,9 @@ function switchLanguage(lang) {
 }
 
 function updateLanguageToggle() {
-    const langButtons = document.querySelectorAll(".lang-btn");
-    langButtons.forEach(btn => {
-        if (btn.dataset.lang === currentLanguage) {
-            btn.classList.add("active");
-        } else {
-            btn.classList.remove("active");
-        }
-    });
+    // Update button text to show the opposite language
+    const langToggle = document.getElementById("langToggle");
+    langToggle.textContent = currentLanguage === "en" ? "AR" : "EN";
 }
 
 function updateAllTranslations() {
@@ -312,11 +307,14 @@ function updateAllTranslations() {
 // EVENT LISTENERS
 // ==========================================
 function initializeEventListeners() {
-    // Language toggle buttons
-    document.querySelectorAll(".lang-btn").forEach(btn => {
-        btn.addEventListener("click", () => {
-            switchLanguage(btn.dataset.lang);
-        });
+    // Language toggle button
+    const langToggle = document.getElementById("langToggle");
+    langToggle.addEventListener("click", () => {
+        // Toggle between languages
+        const newLang = currentLanguage === "en" ? "ar" : "en";
+        switchLanguage(newLang);
+        // Update button text to show the opposite language
+        langToggle.textContent = newLang === "en" ? "AR" : "EN";
     });
 
     // Tab buttons
